@@ -1,0 +1,91 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    height: 100vh; /* Full height of the viewport */
+    width: 190vh;
+  }
+  
+  .left-section {
+
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff; /* White background for the left section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align items vertically */
+    background-color: rgba(62, 62, 159, 1);
+    opacity: 1;
+    width: 240px;
+    border-radius:0 5px 5px 0;
+    position: relative;
+  }
+  
+  .left-title {
+    position: absolute; /* Absolutely position the title */
+    top: 20px; /* Position the title 20px from the top */
+    left: 50%; /* Center the title horizontally */
+    transform: translateX(-50%); /* Center the title horizontally */
+    font-size: 1.5em;
+    color: #333; /* Darker grey for better readability */
+  }
+  .left-tit {
+    position: absolute; /* Absolutely position the title */
+    top: 50px; /* Position the title 20px from the top */
+    left: 50%; /* Center the title horizontally */
+    transform: translateX(-50%); /* Center the title horizontally */
+   
+    color: #333; /* Darker grey for better readability */
+  }
+  
+  .left-button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 1) ;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+    width: 140px;
+    margin-left: 10px;
+  }
+  
+  .left-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .right-section {
+    flex: 2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the right section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    width: 500px;
+  }
+  
+  .right-title {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333; /* Darker grey for better readability */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .left-section,
+    .right-section {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%; /* Ensure full width for both sections on smaller screens */
+    }
+  }
+  
