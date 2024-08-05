@@ -1,3 +1,4 @@
+// src/components/Home.jsx (or your login component)
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import home from '../assets/home.png';
@@ -13,6 +14,7 @@ const Home = () => {
     
     // Replace this with your actual authentication logic
     if (username === 'user' && password === 'password') {
+      localStorage.setItem('username', username);
       navigate('/dashboard'); // Navigate to the dashboard upon successful login
     } else {
       alert('Invalid username or password');

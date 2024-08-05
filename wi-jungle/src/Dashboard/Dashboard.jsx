@@ -1,22 +1,38 @@
+// src/components/Dashboard.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Calculator from './Calculator';
 import './Dashboard.css';
 import calculator from '../assets/calculator.svg';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const username = localStorage.getItem('username');
+  const userInitial = username ? username.charAt(0).toUpperCase() : '';
+
+  const handleLogout = () => {
+    localStorage.removeItem('username');
+    navigate('/');
+  };
+
   return (
     <div className="dashboard-container">
       <div className="left-section">
-        <h2 className="left-title">Wi-Jungle</h2>
-        <h6 className='left-tit'>Unified Cyber Security Platform</h6>
+        <div>Wi-jungle</div>
         <button className="left-button">
           <img src={calculator} alt="calculator" width='10px' />
-          Calculater
+          Calculator
         </button>
-        
       </div>
       <div className="right-section">
-        <h2 className="right-title">Scientific Calculator</h2>
+        <div className="header-section">
+          <h2 className="right-title">Scientific Calculator</h2>
+          <div className="user-info">
+            <span className="greeting">Hi, {username}</span>
+            <div className="user-avatar">{userInitial}</div>
+          </div>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
+        </div>
         <Calculator />
       </div>
     </div>
