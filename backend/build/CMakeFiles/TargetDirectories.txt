@@ -1,0 +1,3 @@
+D:/webdevelopment/WiJungle/backend/build/CMakeFiles/my_server.dir
+D:/webdevelopment/WiJungle/backend/build/CMakeFiles/ALL_BUILD.dir
+D:/webdevelopment/WiJungle/backend/build/CMakeFiles/ZERO_CHECK.dir

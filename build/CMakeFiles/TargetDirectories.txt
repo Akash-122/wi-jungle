@@ -1,0 +1,3 @@
+D:/webdevelopment/WiJungle/build/CMakeFiles/server.dir
+D:/webdevelopment/WiJungle/build/CMakeFiles/edit_cache.dir
+D:/webdevelopment/WiJungle/build/CMakeFiles/rebuild_cache.dir

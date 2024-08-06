@@ -51,6 +51,7 @@
     margin-top: 10px;
     width: 140px;
     margin-left: 10px;
+    position: relative;
   }
   
   .header-section {
@@ -103,7 +104,16 @@
     font-size: 1.2em;
     color: #0056b3;
   }
+  .sectio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+  }
   
+  .ti {
+    margin: 0;
+  }
   .logout-button {
     margin-left: 20px;
     padding: 10px 20px;

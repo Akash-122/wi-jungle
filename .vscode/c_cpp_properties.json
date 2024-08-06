@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/webdevelopment/vcpkg/installed/x64-windows/include",
+                "C:/msys64/mingw64/include/**" ,// Correct path to MinGW-w64 includes
+                "C:/msys64/mingw64/include/c++/14.2.0"
+        
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe", // Path to g++ executable
+            "cStandard": "c11",
+            "cppStandard": "c++17", // Ensure this matches your compiler's supported version
+            "intelliSenseMode": "gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

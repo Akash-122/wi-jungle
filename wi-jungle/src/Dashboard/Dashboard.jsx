@@ -18,7 +18,10 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="left-section">
-        <div>Wi-jungle</div>
+        <div className='sectio'>
+          <h2 className='ti'>Wi-jungle</h2>
+        <h6 className='ti'>Unified Cyber Security Platform</h6>
+        </div>
         <button className="left-button">
           <img src={calculator} alt="calculator" width='10px' />
           Calculator
@@ -27,6 +30,7 @@ const Dashboard = () => {
       <div className="right-section">
         <div className="header-section">
           <h2 className="right-title">Scientific Calculator</h2>
+          
           <div className="user-info">
             <span className="greeting">Hi, {username}</span>
             <div className="user-avatar">{userInitial}</div>

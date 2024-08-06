@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/webdevelopment/WiJungle/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\server.dir\\server.cpp.obj -c D:\\webdevelopment\\WiJungle\\backend\\server.cpp",
+  "file": "D:/webdevelopment/WiJungle/backend/server.cpp",
+  "output": "CMakeFiles/server.dir/server.cpp.obj"
+}
+]

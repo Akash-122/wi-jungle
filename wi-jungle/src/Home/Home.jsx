@@ -1,6 +1,6 @@
-// src/components/Home.jsx (or your login component)
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Ensure axios is installed
 import home from '../assets/home.png';
 import './Home.css';
 
@@ -11,13 +11,23 @@ const Home = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
-    // Replace this with your actual authentication logic
-    if (username === 'user' && password === 'password') {
-      localStorage.setItem('username', username);
-      navigate('/dashboard'); // Navigate to the dashboard upon successful login
-    } else {
-      alert('Invalid username or password');
+
+    try {
+      const response = await axios.post(
+        'http://localhost:18080/login',
+        new URLSearchParams({ username, password }).toString(), // Correctly format the data
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+      );
+
+      if (response.status === 200) {
+        localStorage.setItem('username', username);
+        navigate('/dashboard');
+      } else {
+        alert('Invalid username or password');
+      }
+    } catch (error) {
+      alert('Error logging in');
+      console.error('Error:', error);
     }
   };
 
@@ -58,6 +68,6 @@ const Home = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
